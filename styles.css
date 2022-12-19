@@ -1,0 +1,258 @@
+body {
+  background-color: #e9eff0;
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #717777;
+  background-image: url(images/bg-pattern.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+}
+#bigdiv {
+  display: grid;
+  width: 28%;
+  margin: auto;
+  margin-top: 4%;
+  gap: 3rem;
+}
+#aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.1em;
+  height: 9rem;
+  background-image: url(images/pattern-circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25% 90%;
+}
+#aside h1 {
+  font-size: 1.5rem;
+
+  color: #2d3d52;
+}
+main {
+  background-color: white;
+  border-radius: 5%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+}
+
+#numbers {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2em;
+
+  margin-top: 0.9rem;
+  width: 85%;
+}
+#price {
+  font-weight: 510;
+  font-size: 0.9rem;
+}
+#MonthtoYear {
+  position: absolute;
+  margin-left: 21.6%;
+  margin-top: 1.2%;
+  font-size: 1rem;
+}
+#output {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d3d52;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 96%;
+  height: 0.6em;
+  background: linear-gradient(to right, #9aeee0 50%, #cbdada 50%);
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 1rem;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+.slider::-moz-range-thumb {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 1rem;
+  background: url("images/icon-slider.svg"), #39dfc3;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 1rem;
+  background: url("images/icon-slider.svg"), #39dfc3;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+#pricing-nav {
+  display: flex;
+  justify-content: end;
+  gap: 2%;
+  margin-right: 2%;
+}
+
+#pricing-nav button {
+  width: 3rem;
+}
+#pricing-nav aside {
+  border-radius: 0.5rem;
+  background-color: hsl(22, 120%, 88%);
+  color: rgb(226, 96, 96);
+  font-weight: 500;
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 1%;
+  display: inline-block;
+}
+#switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.3rem;
+}
+
+#switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#slider {
+  background-color: #b5c4c4;
+  border-radius: 0.8rem;
+  position: absolute;
+  cursor: pointer;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#slider:before {
+  border-radius: 1rem;
+  position: absolute;
+  content: "";
+  height: 0.9rem;
+  width: 0.9rem;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + #slider {
+  background-color: #39dfc3;
+}
+
+input:checked + #slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#line {
+  width: 112%;
+  margin-left: -6%;
+  border-bottom: 1px solid rgb(235, 231, 231);
+}
+
+#bottom {
+  margin-top: -5%;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#bottom ul {
+  list-style-type: none;
+}
+#bottom li {
+  margin-bottom: 7%;
+}
+#bottom li::before {
+  content: url(images/icon-check.svg);
+  margin-right: 1.5em;
+}
+#bottom button {
+  border-radius: 2rem;
+  border: none;
+  margin-top: 1.6rem;
+  background-color: #2d3d52;
+  color: #e9eff0;
+  width: 35%;
+  height: 2.3rem;
+}
+#bottom button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1500px) {
+  * {
+    font-size: 12px;
+  }
+  input:checked + #slider:before {
+    -webkit-transform: translateX(1.5em);
+    -ms-transform: translateX(1.5em);
+    transform: translateX(1.5em);
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+
+#bigdiv {
+  width: 90%;
+  height: 100%;
+}
+#MonthtoYear {
+left: 57%;
+top: 34%;
+}
+
+#bottom {
+  display: grid;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+#bottom >* {
+ margin: auto;
+}
+#bottom button {
+  width: 80%;
+  height: 100%;
+  
+}
+}
